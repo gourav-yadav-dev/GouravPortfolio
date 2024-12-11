@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourav portfolio</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/index.css">
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const text = "Web Developer|"; // Text to display
+            const typingElement = document.getElementById("typing_name");
+            let index = 0;
+            let isDeleting = false;
+            const typingSpeed = 150;
+            const deletingSpeed = 70;
+            const holdTime = 2000;
+
+            function typeAndRemove() {
+                if (!isDeleting) {
+                    // Typing phase
+                    if (index < text.length) {
+                        typingElement.textContent += text[index];
+                        index++;
+                        setTimeout(typeAndRemove, typingSpeed); // Continue typing
+                    } else {
+                        // Pause before deleting
+                        isDeleting = true;
+                        setTimeout(typeAndRemove, holdTime); // Pause before deleting
+                    }
+                } else {
+                    // Deleting phase
+                    if (index > 0) {
+                        typingElement.textContent = text.substring(0, index - 1);
+                        index--;
+                        setTimeout(typeAndRemove, deletingSpeed); // Continue deleting
+                    } else {
+                        // Restart after pause
+                        isDeleting = false;
+                        setTimeout(typeAndRemove, holdTime); // Pause before retyping
+                    }
+                }
+            }
+
+
+            typeAndRemove();
+
+
+
+
+        }
+
+        );
+
+        function offcanvas() {
+
+            document.getElementById('offcanvas_id').style.display = 'block';
+            document.getElementById('offcanvas_btn_open').style.display = 'none';
+
+
+        }
+        function close_offcanvas() {
+            document.getElementById('offcanvas_id').style.display = 'none';
+            document.getElementById('offcanvas_btn_open').style.display = "block";
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="banner_images">
+        <div class="banner_images_color_changer">
+            <header class="header">
+                <div>
+                    <span>Gaurav</span>
+                    <!-- <img src="./public/images/logo.png" alt=""> -->
+                </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><a href="#" id="home">Home</a></li>
+                            <li><a href="#about_links" id="about">About</a></li>
+                            <li><a href="#skill_section" id="services">Skills</a></li>
+                            <li><a href="#resume_section" id="portfolio">Resume</a></li>
+                            <li><a href="#contact_section" id="contact">Contact</a></li>
+                        </ul>
+                        <button class="bi bi-list btn_justify" onclick="offcanvas()" id="offcanvas_btn_open"><a
+                                class="btn_justify"></a></button>
+                    </nav>
+                </div>
+            </header>
+            <div class="offcanvas" id="offcanvas_id" style="display:none">
+                <div style="float:right; margin-right:20px;" onclick="close_offcanvas()"><button
+                        class="btn close_btn"><span class="bi bi-x-lg"></span></button></div>
+                <div>
+                    <div class="offcanvas_images"></div>
+                    <div class="Links">
+                        <aside>
+                            <ul>
+                                <li><a href="#"><span><span
+                                                class="bi bi-instagram"></span></span><span>Instagram</span></a>
+                                </li>
+                                <li><a href="#"><span><span
+                                                class="bi bi-linkedin"></span></span><span>Linkedin</span></a>
+                                </li>
+                                <li><a href="#"><span><span class="bi bi-github"></span></span><span>GitHub</span></a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="services">
+                        <div style="text-align: center;">Services</div>
+                        <div>
+                            <nav>
+                                <ul>
+                                    <li class="home"><span>Home</span></li>
+                                    <li class="about"><a href="#about_links"><span>About</span></a></li>
+                                    <li class="service"><a href="#skill_section"><span>Skills</span></a></li>
+                                    <li class="contact"><a href="#contact_section"><span>Contact</span></a></li>
+                                </ul>
+                            </nav>  
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="Name_heading">
+                <h1>I am Gaurav Yadav</h1>
+                <h2 id="typing_name"></h2>
+                <a href="#" class="bi bi-chevron-down down_btn"></a>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="about_heading">About</div>
+        <section class="about_section" id="about_links">
+            <div class="about_detail">
+                <div class="about_detail1">
+                    <div class="about_detail1_subcontent1">
+                        <div class="image_container">
+                            <img src="./public/images/images.jpg" height="90%" width="100%">
+                        </div>
+                        <div class="profile_container">
+                            <div>
+                                <span><span class="profile_heading">Name:</span><span>Gourav</span></span>
+                            </div>
+                            <div>
+                                <span><span class="profile_heading">Profile:</span><span>Full stack
+                                        developer</span></span>
+                            </div>
+                            <div>
+                                <span><span
+                                        class="profile_heading">Email:</span><span>Yadavgourav263@gmail.com</span></span>
+                            </div>
+                            <div>
+                                <span><span class="profile_heading">Phone:</span><span>+91 9111773835</span></span>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="about_detail1_subcontent2">
+                        <p style="font-weight: bold; font-size:20px;margin-top:10px;">Skills</p>
+                        <div class="skill_heading_container">
+                            <div class="skill_heading">HTML</div>
+                            <div class="prgoress_container"><progress max="100" value="100"
+                                    style="width:90%"></progress>
+                                <span class="skill_per">100%</span>
+                            </div>
+                        </div>
+                        <div class="skill_heading_container">
+                            <div class="skill_heading">CSS</div>
+                            <div class="prgoress_container"><progress max="100" value="90"
+                                    style="width:90%"></progress>
+                                <span class="skill_per">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill_heading_container">
+                            <div class="skill_heading">JAVASCRIPT</div>
+                            <div class="prgoress_container"><progress max="100" value="75"
+                                    style="width:90%"></progress>
+                                <span class="skill_per">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill_heading_container">
+                            <div class="skill_heading">NODE</div>
+                            <div class="prgoress_container"><progress max="100" value="89" style="width:90%"
+                                    class="progress_bar"></progress>
+                                <span class="skill_per">89%</span>
+                            </div>
+                        </div>
+                        <div class="skill_heading_container">
+                            <div class="skill_heading">EXPRESS</div>
+                            <div class="prgoress_container"><progress max="100" value="84"
+                                    style="width:90%"></progress>
+                                <span class="skill_per">84%</span>
+                            </div>
+                        </div>
+                        <div class="skill_heading_container">
+                            <div class="skill_heading">SQL/MONGODB</div>
+                            <div class="prgoress_container"><progress max="100" value="90"
+                                    style="width:90%"></progress>
+                                <span class="skill_per">90%</span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="about_detail2">
+                    <div class="about_me_container">
+                        <span><span>About</span><span> me</span></span>
+                    </div>
+                    <div>
+                        <div>
+                            Hi, I’m Gourav yadav, a recent graduate and aspiring web developer with a passion for
+                            creating
+                            functional and visually appealing websites. My journey began with a curiosity for how
+                            websites
+                            work, and I’ve since honed my skills in HTML, CSS, and JavaScript while diving into tools
+                            like
+                            React and Node.js.
+                        </div>
+                        <div>
+                            As part of my learning journey, I’ve built several projects, including a personal portfolio
+                            website and a weather app that fetches real-time data from APIs. These experiences have
+                            taught
+                            me the value of clean code, responsive design, and continuous learning.
+                        </div>
+                        <div>
+                            I’m excited to contribute to impactful projects and grow as a professional in this dynamic
+                            field. Let’s connect and bring innovative ideas to life!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="skills">
+            Skills
+        </section>
+        <section class="skill_card" style="z-index: 0;" id="skill_section">
+
+            <div class="frontend_card">
+                <div class="frontend_card_detail">
+                    <div class="frontend_image all_card_image">
+
+                    </div>
+                    <div>
+                        FrontEnd Skills
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>REACT</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="all_card_background">
+                </div>
+
+            </div>
+            <div class="backend_card">
+                <div class="backend_card_detail">
+                    <div class="backend_image all_card_image">
+                    </div>
+                    <div>
+                        BackEnd Skills
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>NODEJS</li>
+                                <li>EXPRESS</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="all_card_background">
+                </div>
+
+            </div>
+            <div class="database_card">
+                <div class="database_card_detail">
+                    <div class="database_image all_card_image">
+
+                    </div>
+                    <div>
+                        DataBase Skills
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>MYSQL</li>
+                                <li>MONGODB</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="all_card_background">
+                </div>
+
+            </div>
+
+        </section>
+        <section style="margin-top:40px;" id="resume_section">
+            <div style="text-align:center" class="resume">Resume</div>
+            <div class="resume_section">
+                <div class="education">
+                    <div class="education_container">
+                        Education
+                    </div>
+                    <div class="education_college">
+                        <div style="z-index:1;">
+                            <div style="font-weight: bold;">
+                                <span class="bi bi-calendar-check"></span>
+                                <span>September</span>
+                                <span>2020</span>
+                                <span>-</span>
+                                <span>June 2024</span>
+                            </div>
+                            <div class="education_heading">
+                                Bachelor of Technology in Computer Science and Engineering
+                            </div>
+                            <div class="education_name">
+                                Lakshmi narain college of technology
+                            </div>
+                            <div>
+                                Indore
+                            </div>
+                        </div>
+                        <div class="resume_background_changer">
+
+                        </div>
+
+                    </div>
+                    <div class="education_higher education_college">
+                        <div style="z-index: 1;">
+                            <div style="font-weight: bold;">
+                                <span class="bi bi-calendar-check"></span>
+                                <span>July</span>
+                                <span>2019</span>
+                                <span>-</span>
+                                <span>March 2020</span>
+                            </div>
+                            <div class="education_heading">
+                                Higher Secondary
+                            </div>
+                            <div class="education_name">
+                                Om shanti h.s school bagli
+                            </div>
+                            <div class="education_location">
+                                Bagli
+                            </div>
+
+                        </div>
+
+                        <div class="resume_background_changer ">
+
+                        </div>
+                    </div>
+                    <div class="education_secondary education_college">
+                        <div style="z-index:1;">
+                            <div style="font-weight: bold;">
+                                <span class="bi bi-calendar-check"></span>
+                                <span>July</span>
+                                <span>2017</span>
+                                <span>-</span>
+                                <span>March 2018</span>
+                            </div>
+                            <div class="education_heading">
+                                Higher Secondary
+                            </div>
+                            <div class="education_name">
+                                Om shanti h.s school bagli
+                            </div>
+                            <div class="education_location">
+                                Bagli
+                            </div>
+
+                        </div>
+
+                        <div class="resume_background_changer">
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="projects">
+                    <div class="traing_container">Training</div>
+                    <div class="project_card">
+                        <div style="z-index:1; position: relative;">
+                            <div>
+                                <span class="bi bi-calendar-check"></span>
+                                <span>September</span>
+                                <span>2024</span>
+                                <span>-</span>
+                                <span>Present</span>
+                            </div>
+                            <div class="training_heading">
+                                Full-Stack Web Development(MERN STACK)
+                            </div>
+                            <div>
+                                Training-center:Naresh IT(Hyderabad)
+                            </div>
+                            <div>
+                                Duration:6 Month
+                            </div>
+                            <div class="training_skill">
+
+                                <span>Skill</span>
+                                <ol>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JAVASCRIPT</li>
+                                    <li>REACT</li>
+                                    <li>NODE</li>
+                                    <li>EXPRESS</li>
+                                    <li>MONGODB</li>
+                                    <li>SQL</li>
+
+                                </ol>
+
+                            </div>
+                            <div class="certificate_link">
+                                <span>Hyderabad</span>
+                                <a href="">Certificate</a>
+                            </div>
+                        </div>
+                        <div class="project_background_changer">
+
+                        </div>
+                    </div>
+                    <div class="project_card">
+                        <div style="z-index:1; position: relative;">
+                            <div>
+                                <span class="bi bi-calendar-check"></span>
+                                <span>September</span>
+                                <span>2022</span>
+                                <span>-</span>
+                                <span>October 2022</span>
+                            </div>
+                            <div class="training_heading">
+                                Full-Stack Web Development(MERN STACK)
+                            </div>
+                            <div>
+                                Training-center:Becil(BORDCAST ENGINEERING CONSULTANTS INDIA LIMITED)
+                            </div>
+                            <div>
+                                Duration:1 Month
+                            </div>
+                            <div class="training_skill">
+
+                                <span>Skill</span>
+                                <ol>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JAVASCRIPT</li>
+                                    <li>REACT</li>
+                                    <li>NODE</li>
+                                    <li>EXPRESS</li>
+                                    <li>MONGODB</li>
+
+
+                                </ol>
+
+                            </div>
+                            <div class="certificate_link">
+                                <span>Indore</span>
+                                <a href="">Certificate</a>
+
+                            </div>
+                        </div>
+                        <div class="project_background_changer">
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project_container">
+            <div class="project_heading">
+                Project
+            </div>
+            <div class="porjects_containers">
+                <div class="project_first">
+                    <div class="project_card_background  project_card_detail">
+                        <div>
+                            News Project
+                        </div>
+                        <div>
+
+                            <a href="https://github.com/gourav-yadav-dev/News_app/tree/master" target="_blank"><span>GitHub Link</span><span class="bi bi-arrow-right"></span></a>
+                            <span class=" bi bi-github github_link"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project_second">
+                    <div class="project_card_background  project_card_detail">
+                        <div>
+                            E-commerce
+                        </div>
+                        <div>
+
+                            <a href="https://github.com/gourav-yadav-dev/e-commerce" target="_blank"><span>GitHub Link</span><span class="bi bi-arrow-right"></span></a>
+                            <span class=" bi bi-github github_link"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project_third">
+                    <div class="project_card_background  project_card_detail">
+                        <div>
+                            Templates
+                        </div>
+                        <div>
+
+                            <a href="https://github.com/gourav-yadav-dev/template_1" target="_blank"><span>GitHub Link</span><span class="bi bi-arrow-right"></span></a>
+                            <span class=" bi bi-github github_link"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="contact_container" id="contact_section">
+            <div class="contact_container">
+                Contact
+            </div>
+            <div class="contact_container_content">
+                <div class="contact_container_back">
+                    <div class="form">
+                        <div class="form_heading">Please Enter detail here</div>
+                        <form action="" id="form_inputs">
+                            <input type="text" id="username" name="username" placeholder="Enter name">
+                            <input type="email" id="email" name="email" placeholder="Enter email">
+                            <textarea name="textarea" id="textarea" rows="8" cols="10"
+                                placeholder="Drop message here"></textarea>
+                            <div class="submit_reset_btn">
+                                <button type="submit">Submit</button>
+                                <button type="reset">Reset</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="detail">
+                        <div>
+                            <address>
+                                <div>
+                                    address: Vvn hostel Ameerpet
+                                </div>
+                                <div>
+                                    City: Hyderabad pincode 500016
+                                </div>
+                            </address>
+                        </div>
+                        <div>
+                            <aside>
+                                <ul>
+                                    <li><a href=""><span class="bi bi-instagram"></span></a></li>
+                                    <li><a href=""><span class="bi bi-github"></span></a></li>
+                                    <li><a href=""><span class="bi bi-linkedin"></span></a></li>
+                                </ul>
+                            </aside>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </section>
+
+
+</body>
+
+</html>
