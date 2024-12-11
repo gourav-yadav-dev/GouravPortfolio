@@ -816,30 +816,58 @@ button[type='reset']:hover {
     display: flex;
     flex-direction: column;
     /* justify-content:space-between; */
-    align-items: center;
+    /* align-items: center; */
+    /* border:1px solid red; */
+    font-family: Arial, Helvetica, sans-serif;
 }
+.email div:first-child,
+.phonenumber div:first-child,
+.address div:first-child,
+.city div:first-child{
+    color:yellowgreen;
+}
+.email div:last-child,
+.city div:last-child,
+.phonenumber div:last-child
+,.address div:last-child{
+    font-size:15px;
+}
+.email,.phonenumber,.address,.city{
+    text-align: left;
+}
+.email div,.phonenumber div,.address div
+,.city div
+{
 
-address div {
+    margin-bottom: 10px;
+}
+address div{
     font-size: 20px;
+}
+ .email,.phonenumber,.address {
+    /* border:1px solid red; */
+ margin-bottom: 20px;
+
 }
 
 .detail aside ul {
     list-style: none;
     display: flex;
     padding-top: 50px;
-    ;
-
+    
 
 }
 
 .detail aside ul li {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 38px;
 }
 
 .detail aside ul li a {
     color: white;
 
+}
+.detail aside ul li a span{
+    font-size:25px;
 }
 
 
